@@ -2,6 +2,12 @@ packages:
   - apps/*
   - packages/*
 
-onlyBuiltDependencies:
-  - esbuild
-  - workerd
+minimumReleaseAge: 10080
+trustPolicy: no-downgrade
+blockExoticSubdeps: true
+strictDepBuilds: true
+verifyStoreIntegrity: true
+
+allowBuilds:
+  esbuild@0.28.1: true
+  workerd@1.20260917.1: true
